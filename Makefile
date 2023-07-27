@@ -1,10 +1,10 @@
-PLATFORMDIR=/opt/cmdline-tools/platforms/android-34
-BUILDTOOLDIR=/opt/cmdline-tools/build-tools/34.0.0
-D8=$(BUILDTOOLDIR)/d8
-AAPT=$(BUILDTOOLDIR)/aapt
-APKSIGNER=$(BUILDTOOLDIR)/apksigner
-KEYTOOL=keytool
-JAVAC=javac
+PLATFORMDIR = /opt/cmdline-tools/platforms/android-34
+BUILDTOOLDIR = /opt/cmdline-tools/build-tools/34.0.0
+D8 = $(BUILDTOOLDIR)/d8
+AAPT = $(BUILDTOOLDIR)/aapt
+APKSIGNER = $(BUILDTOOLDIR)/apksigner
+KEYTOOL = keytool
+JAVAC = javac
 
 all: NonMerci.apk
 
