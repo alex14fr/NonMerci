@@ -1,8 +1,8 @@
 # Non merci !
 
-This application is a non-configurable, very minimalist call blocker for numbers starting with one of the prefixes designated by ARCEP (the French telecom regulator) for use by call spammers. 
+_Non merci_ (French for "no, thanks") is a non-configurable, very minimalist call blocker for numbers starting with one of the prefixes designated by ARCEP (the French telecom regulator) for use by call spammers. 
 
-If you are outside of France or need more features, you should probably checkout [NoPhoneSpam](https://gitlab.com/bitfireAT/NoPhoneSpam/).
+If you are outside of France or need more features, you should probably checkout the excellent [NoPhoneSpam](https://gitlab.com/bitfireAT/NoPhoneSpam/). _Non merci_ is a stripped-down version of NoPhoneSpam.
 
 The following hard-coded prefixes are blocked:
 
