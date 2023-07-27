@@ -6,6 +6,7 @@ If you are outside of France or need more features, you should probably checkout
 
 The following hard-coded prefixes are blocked:
 
+```
 01 62
 01 63
 02 70
@@ -23,10 +24,30 @@ The following hard-coded prefixes are blocked:
 09 47 7
 09 47 8
 09 47 9
+```
 
-## License
+## Limitations
 
-Copyright(c) 2023 Alexandre Janon <alex14fr at gmail dot com>
+If you receive a spam call while already on call, you may hear a notification beep.
+
+The lack of configurability is a _feature_.
+
+
+## Compatibility
+
+Tested to work on Android 10 (Lineage OS).
+
+
+## Build
+
+A pre-built apk is included in the repository, available [here](https://github.com/alex14fr/NonMerci/raw/master/NonMerci.apk).
+
+You can also build it yourself, using make, the JDK (javac, keytool), and Android Studio (d8, aapt, apksigner). Tune the settings in the Makefile to fit your system's configuration.
+
+
+## Author and License
+
+Copyright(c) 2023 Alexandre Janon (alex14fr at gmail dot com)
 
 This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome
 to redistribute it under the conditions of the [GNU GPL v3](LICENSE).
