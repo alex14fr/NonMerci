@@ -9,7 +9,7 @@ public class MActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestPermissions(perm,1);
 		TextView tv=new TextView(this);
-		tv.setText("Blocking is on. Uninstall this application to disable it. ");
+		tv.setText("Blocking is on. Uninstall this application to disable it. \n");
 		setContentView(tv);
 	}
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) { }

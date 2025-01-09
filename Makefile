@@ -5,6 +5,9 @@ AAPT = $(BUILDTOOLDIR)/aapt
 APKSIGNER = $(BUILDTOOLDIR)/apksigner
 KEYTOOL = keytool
 JAVAC = javac
+JAVACFLAGS = -g:none
+
+CLASSES = Receiver.class MActivity.class
 
 all: NonMerci.apk
 
@@ -12,14 +15,14 @@ store.jks:
 	$(KEYTOOL) -genkeypair -keystore $@ -keyalg RSA -keysize 2048
 
 %.class: %.java
-	$(JAVAC) --source 8 --target 8 -cp $(PLATFORMDIR)/android.jar $<
+	$(JAVAC) $(JAVACFLAGS) --source 8 --target 8 -cp $(PLATFORMDIR)/android.jar $<
 
-classes.dex: Receiver.class MActivity.class
-	$(D8) --no-desugaring --output . *.class
+classes.dex: $(CLASSES)
+	$(D8) --no-desugaring --output . $(CLASSES)
 
 NonMerci.apk: store.jks classes.dex AndroidManifest.xml
 	test -d out || mkdir out
-	cp classes.dex out/
+	ln -s ../classes.dex out/
 	$(AAPT) p -f -M AndroidManifest.xml -F $@ -I $(PLATFORMDIR)/android.jar out
 	$(APKSIGNER) sign --ks store.jks $@
 
